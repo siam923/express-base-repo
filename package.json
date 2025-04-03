@@ -1,0 +1,73 @@
+{
+  "name": "job-portal-be",
+  "version": "1.0.0",
+  "description": "Backend for Job Portal",
+  "type": "module",
+  "main": "src/index.js",
+  "imports": {
+    "#src/*": "./src/*",
+    "#controllers/*": "./src/controllers/*",
+    "#services/*": "./src/services/*",
+    "#config": "./src/config/index.js"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "cross-env ENV=dev node src/index.js",
+    "start-qa": "cross-env ENV=qa node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.693.0",
+    "@aws-sdk/s3-request-presigner": "^3.698.0",
+    "axios": "^1.7.7",
+    "axios-retry": "^4.5.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "bottleneck": "^2.19.5",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "http-errors": "^2.0.0",
+    "imap-simple": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mailparser": "^3.7.2",
+    "mime-types": "^2.1.35",
+    "mongoose": "^8.8.1",
+    "mongoose-paginate-v2": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "openai": "^4.87.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "xss": "^1.0.15",
+    "xss-clean": "^0.1.4",
+    "zod": "^3.24.2",
+    "zod-to-json-schema": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^0.0.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "nodemon": "^3.1.7"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
